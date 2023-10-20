@@ -1,0 +1,31 @@
+:root{
+    --body-bg: #7E3092;
+    --container-bg: #F6F6F6;
+    --number-wrapper-color: #6C6C6C;
+    --number-wrapper-active-color: #F5F6F4;
+    --number-wrapper-bg: #EEEEEE;
+    --number-wrapper-active-bg: #2467AB;
+    --main-text__heading-color: #767676;
+    --main-text__heading-active-color: #000006;
+    --btn-bg: #E5E5E5;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-bg);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid red;
+}
