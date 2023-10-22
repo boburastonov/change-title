@@ -2,12 +2,15 @@
     --body-bg: #7E3092;
     --container-bg: #F6F6F6;
     --number-wrapper-color: #6C6C6C;
+    --number-wrapper-hover-color: #151514;
     --number-wrapper-active-color: #F5F6F4;
     --number-wrapper-bg: #EEEEEE;
     --number-wrapper-active-bg: #2467AB;
     --main-text__heading-color: #767676;
+    --main-text__heading-hover-color: #212121;
     --main-text__heading-active-color: #000006;
     --btn-bg: #E5E5E5;
+    --btn-hover-color: #DCDCDC;
 }
 
 *{
@@ -23,9 +26,87 @@ body{
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 100px auto;
+    padding: 40px;
     width: 100%;
     max-width: 800px;
-    border: 1px solid red;
+    color: var(--main-text__heading-color);
+    background-color: var(--container-bg);
+    border-radius: 7px;
+}
+
+.main-text__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 120px;
+}
+.main-text__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-text__item:hover .number-wrapper{
+    color: var(--number-wrapper-hover-color);
+}
+.main-text__item:hover .main-text__heading{
+    color: var(--main-text__heading-hover-color);
+}
+
+.main-text__item:not(:last-child){
+    margin-bottom: 20px;
+}
+.number-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    color: var(--number-wrapper-color);
+    background-color: var(--number-wrapper-bg);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.item--active .number-wrapper{
+    color: var(--number-wrapper-active-color);
+    background-color: var(--number-wrapper-active-bg);
+}
+
+.item--active .main-text__heading{
+    color: var(--main-text__heading-active-color);
+}
+.main-text__heading {
+    color: var(--main-text__heading-color);
+    font-size: 24px;
+    font-weight: 500;
+}
+.right__text {
+    font-size: 26px;
+    color: var(--main-text__heading-active-color);
+}
+.btn-group {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.btn{
+    padding: 12px 18px;
+    background-color: var(--btn-bg);
+    border: 0;
+    color: var(--main-text__heading-active-color);
+    outline: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--btn-hover-color);
 }
