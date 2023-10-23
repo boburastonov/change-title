@@ -87,6 +87,10 @@ body{
     color: var(--main-text__heading-active-color);
 }
 
+.item--active:hover .number-wrapper{
+    color: var(--number-wrapper-active-color);
+}
+
 .main-text__heading {
     color: var(--main-text__heading-color);
     font-size: 24px;
