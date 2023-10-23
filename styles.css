@@ -25,7 +25,7 @@ body{
 
 .container{
     display: flex;
-    align-items: center;
+    align-items: start;
     margin: 100px auto;
     padding: 40px;
     width: 100%;
@@ -33,6 +33,7 @@ body{
     color: var(--main-text__heading-color);
     background-color: var(--container-bg);
     border-radius: 7px;
+    overflow-x: hidden;
 }
 
 .main-text__list {
@@ -42,8 +43,9 @@ body{
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-right: 120px;
+    margin-right: 60px;
 }
+
 .main-text__item {
     display: flex;
     align-items: center;
@@ -53,6 +55,7 @@ body{
 .main-text__item:hover .number-wrapper{
     color: var(--number-wrapper-hover-color);
 }
+
 .main-text__item:hover .main-text__heading{
     color: var(--main-text__heading-hover-color);
 }
@@ -60,6 +63,7 @@ body{
 .main-text__item:not(:last-child){
     margin-bottom: 20px;
 }
+
 .number-wrapper {
     display: flex;
     align-items: center;
@@ -82,19 +86,27 @@ body{
 .item--active .main-text__heading{
     color: var(--main-text__heading-active-color);
 }
+
 .main-text__heading {
     color: var(--main-text__heading-color);
     font-size: 24px;
     font-weight: 500;
+    white-space: nowrap;
 }
+
+.right{
+    margin-top: 8px;
+}
+
 .right__text {
-    font-size: 26px;
+    font-size: 24px;
     color: var(--main-text__heading-active-color);
 }
+
 .btn-group {
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .btn{
@@ -105,6 +117,11 @@ body{
     outline: none;
     font-size: 22px;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn:not(:last-child){
+    margin-right: 5px;
 }
 
 .btn:hover{
