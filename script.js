@@ -1,5 +1,4 @@
 const mainItem = document.querySelectorAll(".main-text__item");
-const numberWrapper = document.querySelector('.number-wrapper')
 const rightText = document.querySelector(".right__text");
 const btnGroup = document.querySelector(".btn-group");
 const submitBtn = document.querySelector(".submit-button");
@@ -52,7 +51,7 @@ const prev2 = () => {
     btnGroup.appendChild(subDesBtn);
     btnGroup.removeChild(goBackBtn);
     btnGroup.removeChild(goAheadBtn);
-    btnGroup.style.display = 'flex'
+    btnGroup.style.display = "flex";
   }
   next();
 };
@@ -75,14 +74,10 @@ const prev3 = () => {
     goAheadBtn.addEventListener("click", () => {
       rightText.innerHTML =
         "Ok, we're done. Thanks for sending us your <br> data!";
-        btnGroup.style.display = 'none'
+      btnGroup.style.display = "none";
     });
   }
 };
-
-mainItem.addEventListener('mouseout', ()=>{
-  numberWrapper.style.color = "red";
-})
 
 backBtn.addEventListener("click", prev1);
 subDesBtn.addEventListener("click", prev3);
