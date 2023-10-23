@@ -1,4 +1,5 @@
 const mainItem = document.querySelectorAll(".main-text__item");
+const numberWrapper = document.querySelector('.number-wrapper')
 const rightText = document.querySelector(".right__text");
 const btnGroup = document.querySelector(".btn-group");
 const submitBtn = document.querySelector(".submit-button");
@@ -77,25 +78,11 @@ const prev3 = () => {
         btnGroup.style.display = 'none'
     });
   }
-  next();
 };
 
-const back = () => {
-  if (
-    mainItem[0].classList.contains("item--active") &&
-    mainItem[1].classList.contains("item--active") &&
-    mainItem[2].classList.contains("item--active") == false
-  ) {
-    prev1();
-    btnGroup.children[1].style.display = "none";
-  } else if (
-    mainItem[0].classList.contains("item--active") &&
-    mainItem[1].classList.contains("item--active") &&
-    mainItem[2].classList.contains("item--active")
-  ) {
-    prev2();
-  }
-};
+mainItem.addEventListener('mouseout', ()=>{
+  numberWrapper.style.color = "red";
+})
 
 backBtn.addEventListener("click", prev1);
 subDesBtn.addEventListener("click", prev3);
